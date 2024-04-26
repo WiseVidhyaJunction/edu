@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - WiseVidhya Junction</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #ffffff;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        .registration {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .registration h1 {
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        .registration form input[type="text"],
+        .registration form input[type="email"],
+        .registration form input[type="password"],
+        .registration form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .registration form input[type="submit"] {
+            background-color: #6f00ff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .registration form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .registration form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        footer .social-media a {
+            margin: 0 10px;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            nav ul {
+                text-align: center;
+            }
+            
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .registration {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="WiseVidhya Junction Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="forums.html">Forums</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="registration">
+        <h1>Registration</h1>
+        <form action="register.php" method="POST" onsubmit="return validateForm()">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <select name="class" required>
+                <option value="" disabled selected>Select Class</option>
+                <option value="3">Class 3</option>
+                <option value="4">Class 4</option>
+                <option value="5">Class 5</option>
+                <option value="6">Class 6</option>
+                <option value="7">Class 7</option>
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+                <option value="11">Class 11</option>
+                <option value="12">Class 12</option>
+            </select>
+            <input type="text" name="school" placeholder="School">
+            <input type="text" name="address" placeholder="Address">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+            <input style="font-weight: bold;" type="submit" value="Submit">
+        </form>
+    </section>
+    <footer>
+        <div class="social-media">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+        <p>Contact us: contact@wisevidhyajunction.com</p>
+        <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
+
+            if (password !== confirm_password) {
+                alert("Passwords do not match!");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
