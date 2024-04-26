@@ -20,8 +20,48 @@
 .register:hover, .register:active {
   background-color: rgb(0, 0, 0);
 }
-</style>
-</style>
+
+/* Add this CSS inside styles.css */
+@media only screen and (max-width: 600px) {
+  /* Adjust header */
+  header {
+    text-align: center;
+  }
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  /* Adjust challenge details */
+  .challenge-details {
+    padding: 20px;
+  }
+  .challenge-description,
+  .challenge-requirements,
+  .evaluation-criteria,
+  .prizes {
+    margin-bottom: 20px;
+  }
+  .challenge-description p {
+    font-size: 16px;
+  }
+}
+
+/* Adjust footer */
+footer {
+  text-align: center;
+  padding: 20px;
+}
+.social-media {
+  margin-top: 10px;
+}
+.social-media a {
+  margin: 0 5px;
+}
 
 </style>
 </head>
