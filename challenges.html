@@ -5,6 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenges - WiseVidhya Junction</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #6f00ff;
+}
+
+.footer-contact p {
+    margin: 0;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+
+    .footer-links {
+        margin-top: 20px;
+    }
+
+    .footer-links ul {
+        margin: 0;
+    }
+
+    .footer-links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+    </style>
 
 </head>
 <body>
@@ -40,17 +115,30 @@
         <!-- Add more challenges as needed -->
     </section>
 
-    <footer>
+    <footer class="footer">
         <div class="footer-content">
-            <p>Contact us: contact@wisevidhyajunction.com</p>
-            <div class="social-media">
-                <a href="#"><img src="facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="instagram.png" alt="Instagram"></a> 
-                <a href="#privacy-policy">Privacy Policy</a>
+            <div class="footer-logo">
+                <img src="logo.png" style="width: 50px;" talt="WiseVidhya Junction Footer Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="challenges.html">Challenges</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="forums.html">Forums</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="Alumni.html">Alumni</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+               <a style="color: white; text-underline-offset: none;" href="mailto:wisevidhyajunction@gmail.com"> Contact us: wisevidhyajunction@gmail.com</a>
+                <div class="social-media">
+                    <a href="facebook.com"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="twitter.com"><img src="twitter.png" alt="Twitter"></a>
+                    <a href="instagram.com"><img src="instagram.png" alt="Instagram"></a> 
+                </div>
             </div>
         </div>
-    
     </footer>
 
     <script src="script.js"></script>
