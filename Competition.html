@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition Submission</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your website's CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #750bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            margin-right: 200px;
+            
+        }
+
+        .submission-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .submission-form h2 {
+            text-align: center;
+        }
+
+        .submission-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .submission-form label {
+            margin-top: 10px;
+        }
+
+        .submission-form input[type="text"],
+        .submission-form textarea,
+        .submission-form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .submission-form input[type="file"] {
+            margin-top: 5px;
+        }
+
+        .submission-form button[type="submit"] {
+            background-color: #750bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #750bff;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="size: 1000px;" class="logo">
+            <h1>Student Project Competition</h1>
+     <img   src="competition-logo.png" alt="Logo">  
+        </div>
+    </header>
+
+    <section class="submission-form">
+        <h2>Submit Your Project</h2>
+        <form action="submit.php" method="post" enctype="multipart/form-data">
+            <label for="video">Upload Video (Max 100MB)</label>
+            <input type="file" id="video" name="video" accept="video/*" required>
+            
+            <label for="pdf">Upload PDF (Max 10MB)</label>
+            <input type="file" id="pdf" name="pdf" accept=".pdf" required>
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            
+            <label for="class">Class</label>
+            <select id="class" name="class" required>
+                <option value="">Select Class</option>
+                <option value="3">Class 3</option>
+                <option value="4">Class 4</option>
+                <option value="5">Class 5</option>
+                <option value="6">Class 6</option>
+                <option value="7">Class 7</option>
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+                <option value="11">Class 11</option>
+                <option value="12">Class 12</option>
+            </select>
+            
+            <label for="school">School</label>
+            <input type="text" id="school" name="school" required>
+            
+            <label for="photo">Upload Photo (Max 5MB)</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Contact us at: <a href="mailto:competition@example.com">competition@example.com</a></p>
+    </footer>
+</body>
+</html>
