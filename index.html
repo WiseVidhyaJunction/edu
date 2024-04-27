@@ -3,181 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WiseVidhya Junction</title>
+    <title>Competition Submission</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-<style>
+    <style>
+        /* Your website's CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
 
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 50px 0;
-}
+        header {
+            background-color: #750bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+        }
 
-.footer-logo img {
-    width: 150px;
-    height: auto;
-}
+        .logo img {
+            width: 150px;
+            height: auto;
+            margin-right: 200px;
+            
+        }
 
-.footer-links ul {
-    list-style-type: none;
-    padding: 0;
-}
+        .submission-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
 
-.footer-links li {
-    display: inline-block;
-    margin-right: 20px;
-}
+        .submission-form h2 {
+            text-align: center;
+        }
 
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+        .submission-form form {
+            display: flex;
+            flex-direction: column;
+        }
 
-.footer-links a:hover {
-    color: #6f00ff;
-}
+        .submission-form label {
+            margin-top: 10px;
+        }
 
-.footer-contact p {
-    margin: 0;
-}
+        .submission-form label.required:after {
+            content: "*";
+            color: red;
+        }
 
-.social-media a {
-    margin-right: 10px;
-}
+        .submission-form input[type="text"],
+        .submission-form input[type="tel"],
+        .submission-form input[type="email"],
+        .submission-form textarea,
+        .submission-form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
 
-.social-media img {
-    width: 30px;
-    height: auto;
-}
+        .submission-form input[type="file"] {
+            margin-top: 5px;
+        }
 
-@media only screen and (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+        .submission-form button[type="submit"] {
+            background-color: #750bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
 
-    }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #750bff;
+            color: #fff;
+        }
 
+        footer a {
+            color: #fff;
+        }
 
-    .footer-links {
-        margin-top: 20px;
-    }
-
-    .footer-links ul {
-        margin: 0;
-    }
-
-    .footer-links li {
-        display: block;
-        margin-bottom: 10px;
-    }
-}
-h1 {
-    font-family: 'Montserrat Alternates', sans-serif; /* Unique font */
-    background-color: #750bff; /* Unique color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
-    letter-spacing: 2px; /* Adjust letter spacing for emphasis */
-    text-transform: uppercase; /* Convert text to uppercase */
-    animation: pulse 2s infinite alternate, lightning 5s infinite; /* Animation for attention and lightning effect */
-
-    /* Add additional styling properties as needed */
-    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); /* Color lightning gradient */
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-@keyframes lightning {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-</style>
+        /* Media Queries for Responsive Design */
+        @media only screen and (max-width: 600px) {
+            .submission-form {
+                padding: 10px;
+            }
+            .logo img {
+                width: 100px;
+                margin-right: 20px;
+            }
+            header {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">
-           <a href="index.html"><img src="logo.png" alt="WiseVidhya Junction Logo"></a> 
+            <h1>Student Project Competition</h1>
+            <img src="competition-logo.png" alt="Logo">  
         </div>
-        <nav>
-            <ul>
-                <li><a href="challenges.html">Challenges</a></li>
-                <li><a href="tutorials.html">Tutorials</a></li>
-                <li><a href="forums.html">Forums</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="Alumni.html">Alumni</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="Competition.html">CS</a></li>
-               
-
-            </ul>
-        </nav>
     </header>
 
-    <section class="hero" style="background-image:url(Aduino.jpeg); border-radius: 5px;">
-        <h1 style="color: rgb(255, 255, 255);">Empowering Students with Technical Challenges</h1>
-       <center> <p style="background-color: #000000; color: aliceblue; max-width: 500px;">Join us to enhance your skills and knowledge!</p> </center> 
-        <a href="challenges.html" class="cta">Explore Challenges</a>
+    <section class="submission-form">
+        <h2>Submit Your Project</h2>
+        <form id="submission-form" action="submit.php" method="post" enctype="multipart/form-data">
+            <label for="name" class="required">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email" class="required">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mobile" class="required">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            
+            <label for="class" class="required">Class</label>
+            <select id="class" name="class" required>
+                <option value="">Select Class</option>
+                <option value="3">Class 3</option>
+                <option value="4">Class 4</option>
+                <option value="5">Class 5</option>
+                <option value="6">Class 6</option>
+                <option value="7">Class 7</option>
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+                <option value="11">Class 11</option>
+                <option value="12">Class 12</option>
+            </select>
+            
+            <label for="school" class="required">School</label>
+            <input type="text" id="school" name="school" required>
+            
+            <label for="address" class="required">Address</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            
+            <label for="photo" class="required">Upload ID Card Photo (Max 5MB)</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            
+            <label for="video" class="required">Upload Project Video (Max 100MB)</label>
+            <input type="file" id="video" name="video" accept="video/*" required>
+            
+            <button type="submit">Submit</button>
+        </form>
     </section>
 
-    <!-- Other sections and content can be added here -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <a href="index.html"><img  src="footer-logo.png" style="width: 50px;" talt="WiseVidhya Junction Footer Logo"></a> 
-
-            </div>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="challenges.html">Challenges</a></li>
-                    <li><a href="tutorials.html">Tutorials</a></li>
-                    <li><a href="forums.html">Forums</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="Alumni.html">Alumni</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-               <a style="color: white; text-underline-offset: none;" href="mailto:wisevidhyajunction@gmail.com"> Contact us: wisevidhyajunction@gmail.com</a>
-                <div class="social-media">
-                    <a href="facebook.com"><img src="facebook.png" alt="Facebook"></a>
-                    <a href="twitter.com"><img src="twitter.png" alt="Twitter"></a>
-                    <a href="instagram.com"><img src="instagram.png" alt="Instagram"></a> 
-                </div>
-            </div>
-        </div>
+    <footer>
+        <p>Contact us at: <a href="mailto:competition@example.com">competition@example.com</a></p>
     </footer>
-    
-    
-
-    <script src="script.js"></script>
 </body>
 </html>
