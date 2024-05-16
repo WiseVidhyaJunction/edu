@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Verification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <a href="How to install Python Pycharm on Windows.pdf" target="_blank">Download PDF</a>
+
+    <section class="verification">
+        <h1>User Verification</h1>
+        <form id="verificationForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="button" id="sendEmailOTP">Send OTP to Email</button>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            <button type="button" id="sendMobileOTP">Send OTP to Mobile</button>
+
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" name="otp" required>
+
+            <button type="submit">Verify</button>
+        </form>
+    </section>
+
+    <script src="verification.js"></script>
+
+    <script>
+
+        // Mock function to send OTP via email
+function sendEmailOTP(email) {
+    // Implement sending OTP to the provided email address
+    console.log(`OTP sent to ${email}`);
+    // For demonstration purposes, you might generate a random OTP and display it in the console
+    const otp = Math.floor(100000 + Math.random() * 900000);
+    console.log(`Generated OTP: ${otp}`);
+}
+
+// Mock function to send OTP via SMS
+function sendMobileOTP(mobile) {
+    // Implement sending OTP to the provided mobile number
+    console.log(`OTP sent to ${mobile}`);
+    // For demonstration purposes, you might generate a random OTP and display it in the console
+    const otp = Math.floor(100000 + Math.random() * 900000);
+    console.log(`Generated OTP: ${otp}`);
+}
+
+// Event listeners for sending OTPs
+document.getElementById("sendEmailOTP").addEventListener("click", function() {
+    const email = document.getElementById("email").value;
+    sendEmailOTP(email);
+});
+
+document.getElementById("sendMobileOTP").addEventListener("click", function() {
+    const mobile = document.getElementById("mobile").value;
+    sendMobileOTP(mobile);
+});
+
+// Event listener for form submission
+document.getElementById("verificationForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission for now, we'll handle it manually
+
+    // Validate OTP (you would typically send OTP to a server for verification)
+    const otpInput = document.getElementById("otp").value;
+    const isValidOTP = validateOTP(otpInput); // Assume validateOTP function checks OTP against a stored value
+
+    if (isValidOTP) {
+        alert("Verification successful!");
+        // Proceed with registration or other actions
+    } else {
+        alert("Invalid OTP. Please try again.");
+    }
+});
+
+// Mock function to validate OTP (you would typically validate OTP against a stored value)
+function validateOTP(otp) {
+    // For demonstration purposes, assume the correct OTP is "123456"
+    return otp === "123456";
+}
+
+    </script>
+</body>
+</html>

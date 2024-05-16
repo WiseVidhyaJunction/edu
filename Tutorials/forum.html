@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiseVidhya Junction - Forum</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styling for forum posts (same as before) */
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Header content (same as before) -->
+    </header>
+
+    <section class="forum">
+        <h2>Welcome to the Forum</h2>
+        <!-- Form for uploading problems -->
+        <form id="uploadForm" action="#" method="post" enctype="multipart/form-data">
+            <label for="problem">Upload Your Problem:</label><br>
+            <textarea id="problem" name="problem" rows="4" cols="50"></textarea><br>
+            <input type="file" name="file" id="file"><br>
+            <input type="submit" value="Post">
+        </form>
+
+        <!-- List of uploaded problems -->
+        <div id="problem-list" class="problem-list">
+            <!-- Existing posts (if any) will be displayed here -->
+        </div>
+    </section>
+
+    <!-- Footer (same as before) -->
+
+    <script>
+        document.getElementById("uploadForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            // Get the problem text from the textarea
+            var problemText = document.getElementById("problem").value;
+            // Create a new post element
+            var post = document.createElement("div");
+            post.classList.add("post");
+            post.innerHTML = `
+                <p>${problemText}</p>
+                <div class="post-actions">
+                    <button class="like-btn" onclick="likePost(this)">&#10084;</button>
+                    <a href="#" class="comment-btn">Comment</a>
+                </div>
+                <div class="comments" style="display: none;"></div>
+            `;
+            // Append the new post to the problem list
+            document.getElementById("problem-list").appendChild(post);
+            // Reset the form
+            document.getElementById("uploadForm").reset();
+        });
+
+        function likePost(button) {
+            // Toggle like button (same as before)
+        }
+    </script>
+</body>
+</html>

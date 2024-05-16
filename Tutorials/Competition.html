@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition Submission</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your website's CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #750bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            margin-right: 200px;
+            
+        }
+
+        .submission-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .submission-form h2 {
+            text-align: center;
+        }
+
+        .submission-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .submission-form label {
+            margin-top: 10px;
+        }
+
+        .submission-form label.required:after {
+            content: "*";
+            color: red;
+        }
+
+        .submission-form input[type="text"],
+        .submission-form input[type="tel"],
+        .submission-form input[type="email"],
+        .submission-form textarea,
+        .submission-form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .submission-form input[type="file"] {
+            margin-top: 5px;
+        }
+
+        .submission-form button[type="submit"] {
+            background-color: #750bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #750bff;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media only screen and (max-width: 600px) {
+            .submission-form {
+                padding: 10px;
+            }
+            .logo img {
+                width: 100px;
+                margin-right: 20px;
+            }
+            header {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Student Project Competition</h1>
+            <img src="competition-logo.png" alt="Logo">  
+        </div>
+    </header>
+
+    <section class="submission-form">
+        <h2>Submit Your Project</h2>
+        <form id="submission-form" action="submit.php" method="post" enctype="multipart/form-data">
+            <label for="name" class="required">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email" class="required">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mobile" class="required">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            
+            <label for="class" class="required">Class</label>
+            <select id="class" name="class" required>
+                <option value="">Select Class</option>
+                <option value="3">Class 3</option>
+                <option value="4">Class 4</option>
+                <option value="5">Class 5</option>
+                <option value="6">Class 6</option>
+                <option value="7">Class 7</option>
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+                <option value="11">Class 11</option>
+                <option value="12">Class 12</option>
+            </select>
+            
+            <label for="school" class="required">School</label>
+            <input type="text" id="school" name="school" required>
+            
+            <label for="address" class="required">Address</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            
+            <label for="photo" class="required">Upload ID Card Photo (Max 5MB)</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            
+            <label for="video" class="required">Upload Project Video (Max 100MB)</label>
+            <input type="file" id="video" name="video" accept="video/*" required>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Contact us at: <a href="mailto: wisevidhyajunction.competition@gmail.com">wisevidhyajunction.competition@gmail.com</a></p>
+    </footer>
+</body>
+</html>
